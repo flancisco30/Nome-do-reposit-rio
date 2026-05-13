@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mensagem Especial</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#1e1e2f,#3b3b98);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.card{
+    background:white;
+    width:90%;
+    max-width:700px;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+    animation:entrada 1.5s ease;
+}
+
+h1{
+    color:#3b3b98;
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+p{
+    color:#444;
+    font-size:20px;
+}
+
+.lista{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.nome{
+    background:#3b3b98;
+    color:white;
+    padding:15px;
+    border-radius:15px;
+    font-size:22px;
+    transition:0.3s;
+}
+
+.nome:hover{
+    transform:scale(1.08);
+    background:#575fcf;
+}
+
+.botao{
+    margin-top:35px;
+    padding:15px 30px;
+    border:none;
+    border-radius:15px;
+    background:#3b3b98;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.botao:hover{
+    background:#575fcf;
+    transform:scale(1.05);
+}
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>Mais cachorras</h1>
+
+    <p>Pessoas especiais:</p>
+
+    <div class="lista">
+        <div class="nome">Cida Boa</div>
+        <div class="nome">Tatiele</div>
+        <div class="nome">Francisca</div>
+        <div class="nome">Graça Adriele</div>
+        <div class="nome">Deusilene</div>
+    </div>
+
+    <button class="botao" onclick="mostrarMensagem()">
+        Clique Aqui
+    </button>
+
+</div>
+
+<script>
+function mostrarMensagem(){
+    alert("Olá para Cida Boa, Tatiele, Francisca, Graça Adriele e Deusilene!");
+}
+</script>
+
+</body>
+</html>
